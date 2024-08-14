@@ -1,0 +1,39 @@
+footer {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+footer p{
+    color: white;
+    font-weight: bold;
+}
+
+.contact {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.contact:hover{
+    cursor: pointer;
+}
+
+.contactIcon {
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    transition: color 0.5s;
+}
+
+.contactLink {
+    transition: color 0.5s;
+}
+
+@media only screen and (max-width: 700px) {
+    .contactLink{
+        display: none;
+    }
+
+}

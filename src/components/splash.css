@@ -1,0 +1,84 @@
+#splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+}
+
+#splashHeading {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    overflow-y: hidden;
+    overflow-x: visible;
+    height: 6rem;
+    width: 34rem;
+    padding: 0 0.2rem;
+    transition: all 1s ease-in;
+}
+
+#splashHeading h1{
+    font-family: "Lilita One", sans-serif;
+    color: var(--bright-colour);
+    font-size: 6rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary-colour);
+    transition: all .5s ease-in-out;
+    line-height: 1;
+    letter-spacing: .5px;
+}
+
+#splashHeading span{
+    font-family: "Lilita One", sans-serif;
+    color: #ffffff00;
+    font-size: 6rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary-colour);
+    transition: all .5s ease-in-out;
+    line-height: 1;
+    margin-right: .5px;
+}
+
+#splashHeading h1:hover {
+    color: var(--bright-colour);
+    cursor: pointer;
+}
+
+#splashIntro{
+    color: var(--bright-colour);
+    position: relative;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#terFolio h1{
+    color: var(--bright-colour);
+    margin-left: .2rem;
+}
+
+@media only screen and (max-width: 750px) {
+    #splashHeading {
+        height: 4.5rem;
+        width: 25.5rem;
+    }
+    
+    #splashHeading h1{
+        font-size: 4.5rem;
+    }
+    #splashHeading span{
+        font-size: 4.5rem;
+    }
+    #splashIntro{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,106 @@
+#about {
+    overflow-y: auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#introBox {
+    display: inline-flex;
+}
+
+#intro {
+    padding: 1rem;
+    color: var(--light-colour);
+    width: 80%;
+}
+
+#mePortrait {
+    width: 20%;
+    object-fit:contain;
+    padding:1rem;
+}
+
+#techSkills {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+#techSkills h2{
+    margin-bottom: 0.5rem;
+}
+
+.skill {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    background-color: #ffffff20;
+    padding: 1rem;
+    border-radius: 50%;
+    overflow:visible;
+    margin: 0 1.5rem;
+    position: relative;
+    display: inline;
+    transition: all 0.5s;
+}
+
+#skillsList {
+    width: 100%;
+    overflow: hidden;
+    height: 6rem;
+    position: relative;
+    white-space: nowrap;
+    display: inline;
+}
+
+#skillsList img {
+    animation: scroll 10s linear infinite;
+}
+
+#skillNameFollowMouse {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem;
+    color: var(--primary-colour);
+    z-index: 2;
+    border-radius: 5px 5px 5px 0;
+    white-space: nowrap;
+}
+
+.introHighlight {
+    font-weight: bold;
+    color: var(--bright-colour);
+}
+
+#introTextFollowMouse {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem;
+    color: var(--primary-colour);
+    z-index: 2;
+    border-radius: 5px 5px 5px 0 ;
+    white-space: nowrap;
+}
+
+#introImageFollowMouse {
+    position: absolute;
+    width: 80px;
+    z-index: 3;
+}
+
+.activeHighlight:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+    #introBox {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #mePortrait{
+        width: 30%;
+        padding: 0.5rem;
+    }
+
+}
