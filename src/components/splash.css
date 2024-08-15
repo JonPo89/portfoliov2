@@ -79,6 +79,23 @@
         font-size: 4.5rem;
     }
     #splashIntro{
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #splashHeading {
+        height: 3rem;
+        width: 17.5rem;
+    }
+    
+    #splashHeading h1{
+        font-size: 3rem;
+    }
+    #splashHeading span{
+        font-size: 3rem;
+    }
+    #splashIntro{
+        font-size: 1rem;
     }
 }

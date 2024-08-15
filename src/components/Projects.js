@@ -20,7 +20,9 @@ export function Projects () {
     useEffect(() => {
         const updateWidth = () => {
             const width = window.innerWidth;
-            if (width < 700){
+            if (width < 500) {
+                setWindowWidth(2);
+            }else if (width < 700){
                 setWindowWidth(3);
             } else {
                 setWindowWidth(4);
@@ -75,7 +77,7 @@ export function Projects () {
 
     return (
         <div className="box" id="projects">
-            <div id="projectsHoverMessage" style={{display: followMouseVisible ? "inline" : "none", left: `${mousePosition.x + 7}px`, top: `${mousePosition.y - 40}px`}}>
+            <div id="projectsHoverMessage" style={{display: followMouseVisible ? "inline" : "none", left: windowWidth === 2 ? 0 : `${mousePosition.x + 7}px`, top: `${mousePosition.y - 80}px`}}>
                 <p dangerouslySetInnerHTML={{ __html: hoverMessage }} />
             </div>
 

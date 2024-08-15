@@ -92,8 +92,22 @@ header {
         padding-left: 0;
     }
 
+    .activeNavLink {
+        padding-left: 0;
+    }
+
     #title {
         display: none;
     }
 
+}
+
+@media only screen and (max-width: 450px) {
+    .inactiveNavLink {
+        font-size: 1.2rem;
+    }
+
+    .activeNavLink {
+        font-size: 1.2rem;
+    }
 }

@@ -12,6 +12,8 @@ export function Header () {
     const [splashDescriptionOpacity, setSplashDescriptionOpacity] = useState(1);
     const [splashHeadingAlternate, setSplashHeadingAlternate] = useState(false);
     const [splashHeadingAnimate, setSplashHeadingAnimate] = useState(false);
+    const [splashFolioTerSwap, setSplashFolioTerSwap] = useState(false);
+
     const [headingColour, setHeadingColour] = useState(null);
     const [headingFont, setHeadingFont] = useState("Lilita One");
     const [headingAnimate, setHeadingAnimate] = useState(true);
@@ -31,10 +33,11 @@ export function Header () {
        
     const headerNameAnimate = useAnimatedLetters("Jon Porter", headingAnimate, headingAnimate ? 0 : 50, headingAnimate ? 50 : 0, headingAnimate ? 1 : 0, headingAnimate ? 0 : 1, "#ffffff00", "#ffffff00", headingFont, headingColour)
 
-    //Animate and change to Splash Page
+    //Animate and swap to Splash Page
     const onClickToggleHome = () => {
         setSplashDisplay("inline-flex");
         setHeadingAnimate(true);
+        setSplashFolioTerSwap(true);
         
         setTimeout(() => {
             setSplashOpacity(1);
@@ -102,6 +105,8 @@ export function Header () {
                 splashDescriptionOpacity={splashDescriptionOpacity}
                 splashHeadingAnimate = {splashHeadingAnimate}
                 splashHeadingAlternate={splashHeadingAlternate}
+                splashFolioTerSwap = {splashFolioTerSwap}
+                setSplashFolioTerSwap={setSplashFolioTerSwap}
             />
             <Footer />
         </div>
