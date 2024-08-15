@@ -23,12 +23,12 @@ export function Footer () {
                 <MdEmail className="contactIcon" style={{color:emailColour}}/>
                 <p className="contactLink" style={{color:emailColour}}>jonporter89@gmail.com</p>
             </div>
-            <a href="https://github.com/JonPo89" target="_blank"> 
+            <a href="https://github.com/JonPo89" target="_blank" rel="noreferrer"> 
                 <div className="contact" id="github" onMouseEnter={()=>{setGithubColour("var(--bright-colour")}} onMouseLeave={()=>{setGithubColour("white")}}>
                     <FaGithub className="contactIcon" style={{color:githubColour}} />
                     <p className="contactLink" style={{color:githubColour}}>jonporter89</p>
                 </div> </a>
-            <a href="https://www.linkedin.com/in/jon-porter-7258bb157/" target="_blank">
+            <a href="https://www.linkedin.com/in/jon-porter-7258bb157/" target="_blank" rel="noreferrer">
                 <div className="contact" id="linkedIn" onMouseEnter={()=>{setLinkedInColour("var(--bright-colour")}} onMouseLeave={()=>{setLinkedInColour("white")}}>
                     <FaLinkedin className="contactIcon" style={{color:linkedInColour}} />
                     <p className="contactLink" style={{color:linkedInColour}}>Jon Porter</p>

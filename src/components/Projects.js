@@ -90,13 +90,14 @@ export function Projects () {
                         <a 
                             href={projectsList[activeProject].websiteLink}
                             target="_blank" 
+                            rel="noreferrer"
                             className="projectLink"  
                             onMouseEnter={ () => setHoverMessage(projectsList[activeProject].warning) }
                             onMouseLeave={ () => setHoverMessage("")}
                             style={{right: projectHoverLocation, opacity: projectHoverOpacity, transition: `all ${projectHoverTransitionTime}s ease-in-out}`}}>
                                 View Website
                         </a>
-                        <a href={projectsList[activeProject].gitHubLink}  className="projectLink" target="_blank" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
+                        <a href={projectsList[activeProject].gitHubLink}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
                     </div>
                     <p id="projectSkillsDescription" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} style={{top: projectHoverLocation, opacity: projectHoverOpacity}} />
                 
@@ -116,7 +117,7 @@ export function Projects () {
                         onMouseEnter={() => mouseEnterSkill(project)} 
                         style={{backgroundColor: activeProject === index ? "#ffffff10" : ""}}
                         className="projectSelection">
-                        <img className="projectLogo" src={project.logo} style={{left:activeProject === index ? projectBouncePosition : windowWidth > 3 ? "2rem" : 0, transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
+                        <img className="projectLogo" src={project.logo} alt={`${project.name} logo`} style={{left:activeProject === index ? projectBouncePosition : windowWidth > 3 ? "2rem" : 0, transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
                         <FaArrowRight className="projectArrow" style={{opacity: activeProject === index ? 1 : 0, right:activeProject === index ? projectBouncePosition : "2rem", transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
                     </div> :
                     null

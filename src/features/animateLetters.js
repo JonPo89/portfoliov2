@@ -21,7 +21,7 @@ const useAnimatedLetters = (phrase, reset, initialTop = 0, finalTop = -50, initi
                 );
             }, delay * (index + 1));
         });
-    }, [phrase, delay, initialTop, finalTop, reset]);
+    }, [phrase, delay, initialTop, finalTop, reset, finalOpacity, initialOpacity]);
 
     const renderLetters = () => {
         return letters.map(letter => (

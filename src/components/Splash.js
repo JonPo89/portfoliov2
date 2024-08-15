@@ -30,7 +30,7 @@ export function Splash (props) {
         if (splashHeadingAnimate) {
             setFolioTerSwap(true);
         }
-    }, );
+    }, [splashHeadingAnimate]);
 
     const jonPorterLetterdrop = useAnimatedLetters("Jon Porter", splashHeadingAnimate, splashHeadingAnimate ? 0 : 50, splashHeadingAnimate ? 50 : 0, splashHeadingAnimate ? 1 : 0, splashHeadingAnimate ? 0 : 1);
     

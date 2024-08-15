@@ -95,6 +95,7 @@ export function About() {
                             id="introImageFollowMouse"
                             src={introHighlights.scout.hoverImage[randomNo]}
                             style={{ left: `${mousePosition.x + 7}px`, top: `${mousePosition.y - 40}px` }}
+                            alt="small image of Scout, the cat"
                         />
                     ) : (
                         <p
@@ -118,7 +119,7 @@ export function About() {
                     <br /> <br />
                     When I’m not coding I like to watch moves, read books, draw, game, hang out with friends, or <span className="introHighlight activeHighlight" onMouseEnter={mouseEnterScout} onMouseLeave={() => setIntroHoverMouse("")}>{introHighlights.scout.text}</span>!
                 </p>
-                <img id="mePortrait" src={easterEgg ? meEggImage : meImage} alt="Illustrated image of Jon Porter"/>
+                <img id="mePortrait" src={easterEgg ? meEggImage : meImage} alt="Illustration of Jon Porter"/>
             </div>
             <div id="techSkills">
                 <h2>Technical Skills</h2>
@@ -138,6 +139,7 @@ export function About() {
                             style={{ backgroundColor: skillName === skill.name ? '#ffffff40' : '#ffffff20' }}
                             onMouseEnter={() => skillNameEnter(skill.name)}
                             onMouseLeave={skillNameLeave}
+                            alt={`${skill.name} logo`}
                         />
                     ))}
                 </div>
