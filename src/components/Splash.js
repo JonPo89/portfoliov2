@@ -5,7 +5,6 @@ import useAnimatedLetters from '../features/animateLetters';
 
 export function Splash (props) {
     const { splashHeadingAlternate, splashHeadingAnimate, splashDisplay, splashOpacity, splashHeadingClick, descriptionOpacity, splashFolioTerSwap, setSplashFolioTerSwap} = props;
-
     const [ headingHeight, setHeadingHeight ] = useState("3rem");
 
     //Check if device is touch screen
@@ -35,7 +34,7 @@ export function Splash (props) {
         if (splashHeadingAnimate) {
             setSplashFolioTerSwap(true);
         }
-    }, [splashHeadingAnimate]);
+    }, [splashHeadingAnimate, setSplashFolioTerSwap]);
 
     const jonPorterLetterdrop = useAnimatedLetters("Jon Porter", splashHeadingAnimate, splashHeadingAnimate ? 0 : 50, splashHeadingAnimate ? 50 : 0, splashHeadingAnimate ? 1 : 0, splashHeadingAnimate ? 0 : 1);
     
