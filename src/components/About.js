@@ -95,7 +95,7 @@ export function About() {
                             id="introImageFollowMouse"
                             src={introHighlights.scout.hoverImage[randomNo]}
                             style={{ left: `${mousePosition.x + 7}px`, top: `${mousePosition.y - 40}px` }}
-                            alt="small image of Scout, the cat"
+                            alt="Scout, the cutest little cat"
                         />
                     ) : (
                         <p
