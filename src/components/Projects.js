@@ -15,6 +15,18 @@ export function Projects () {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [ followMouseVisible, setFollowMouseVisible] = useState(false);
     const [ windowWidth, setWindowWidth ] = useState(0);
+    const [ showClickMe, setShowClickMe] = useState(false);
+
+    //Check if device is touch screen
+    const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    useEffect (() => {
+        if (isTouchScreen && projectHoverOpacity < 1) {
+            setShowClickMe(true);
+        } else {
+            setShowClickMe(false);
+        }
+    },[isTouchScreen, projectHoverOpacity])
     
     //Update windowWidth
     useEffect(() => {
@@ -82,6 +94,7 @@ export function Projects () {
             </div>
 
             <div id="activeProjectDetails" style={{backgroundImage:`url(${projectsList[activeProject].image})`}}> 
+                <h3 style={{position:"relative", top:"1rem", display:  showClickMe ? "inline" : "none"}}>Click me for details</h3>
                 {activeProject > 0 ?
                 <div id="projectDisplay" onMouseEnter={activeProjectOnEnter} onMouseLeave={activeProjectOnLeave}>
                     <div id="projectTitle" style={{bottom: projectHoverLocation, opacity: projectHoverOpacity}}>
@@ -106,6 +119,7 @@ export function Projects () {
                 </div>
                 : null
                 }
+
                 
                 
             </div>

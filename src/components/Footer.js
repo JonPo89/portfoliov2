@@ -8,12 +8,32 @@ export function Footer () {
     const [githubColour, setGithubColour] = useState("white");
     const [linkedInColour, setLinkedInColour] = useState("white");
 
-    const copyEmail = () =>{
-        navigator.clipboard.writeText("jonporter89@gmail.com").then(() => {
-            alert("Email copied to clipboard.");
-        }).catch(err => {
-            console.log(err);
-        })
+    const copyEmail = () => {
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText("jonporter89@gmail.com").then(() => {
+                alert("Email copied to clipboard.");
+            }).catch(err => {
+                console.error("Failed to copy email:", err);
+                alert("Failed to copy email. Please try again.");
+            });
+        } else {
+            // Fallback for older browsers or non-secure contexts
+            const textArea = document.createElement("textarea");
+            textArea.value = "jonporter89@gmail.com";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+    
+            try {
+                document.execCommand('copy');
+                alert("Email copied to clipboard.");
+            } catch (err) {
+                console.error("Fallback: Failed to copy email:", err);
+                alert("Failed to copy email. Please try again.");
+            }
+    
+            document.body.removeChild(textArea);
+        }
     }
 
     return (

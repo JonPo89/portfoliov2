@@ -18,6 +18,9 @@
     background-repeat: no-repeat;
     z-index: 2;
     text-align: center;
+    display: inline;
+    align-items: center;
+    justify-content: center;
 }
 
 #activeProjectDetails:hover::before{

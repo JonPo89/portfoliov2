@@ -49,6 +49,9 @@ export function Header () {
         setTimeout(() => {
             setSplashHeadingAlternate(false);
         }, 1650)
+        setTimeout(() => {
+            setSplashFolioTerSwap(false);
+        }, 1850)
     }
 
     //Animate and return to home page, when on splash screen

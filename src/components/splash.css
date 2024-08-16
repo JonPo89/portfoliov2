@@ -13,10 +13,8 @@
 }
 
 #splashHeading {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: start;
     overflow-y: hidden;
@@ -27,7 +25,9 @@
     transition: all 1s ease-in;
 }
 
-#splashHeading h1{
+#splashHeading h1 {
+    flex-wrap: nowrap;
+    vertical-align: middle;
     font-family: "Lilita One", sans-serif;
     color: var(--bright-colour);
     font-size: 6rem;
@@ -86,7 +86,7 @@
 @media only screen and (max-width: 450px) {
     #splashHeading {
         height: 3rem;
-        width: 17.5rem;
+        width: 18.8rem;
     }
     
     #splashHeading h1{

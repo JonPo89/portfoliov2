@@ -75,7 +75,7 @@ export function Splash (props) {
                     <h1>{jonPorterLetterdrop()}</h1>
                 :
                     <>
-                    <h1 style={{color: splashFolioTerSwap ? "var(--bright-colour" : "#ffffff00"}}>Jon Port</h1>
+                    <h1 id="jonPort" style={{color: splashFolioTerSwap ? "var(--bright-colour" : "#ffffff00"}}>Jon Port</h1>
                         <div id="terFolio" 
                         style={{
                             position:"relative", 
