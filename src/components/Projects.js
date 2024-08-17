@@ -114,7 +114,7 @@ export function Projects () {
                                 View Website
                         </a>
                         
-                        <a href={projectHoverOpacity >0 ?projectsList[activeProject].gitHubLink : "#"}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
+                        <a href={projectsList[activeProject]}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
                         </>
                         : null
                     }
