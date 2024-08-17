@@ -102,8 +102,9 @@ export function Projects () {
                         <p>{projectsList[activeProject].shortDescription}</p>    
                     </div>
                     <div id="projectLinks">
-                        <a 
-                            href={projectHoverOpacity > 0 ? projectsList[activeProject].websiteLink : null}
+                        {projectHoverOpacity > 0 ? 
+                        <><a 
+                            href={projectsList[activeProject].websiteLink}
                             target="_blank" 
                             rel="noreferrer"
                             className="projectLink"  
@@ -112,8 +113,12 @@ export function Projects () {
                             style={{right: projectHoverLocation, opacity: projectHoverOpacity, transition: `all ${projectHoverTransitionTime}s ease-in-out}`}}>
                                 View Website
                         </a>
-                        <a href={projectHoverOpacity >0 ?projectsList[activeProject].gitHubLink : null}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
-                    </div>
+                        
+                        <a href={projectHoverOpacity >0 ?projectsList[activeProject].gitHubLink : "#"}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
+                        </>
+                        : null
+                    }
+                        </div>
                     <p id="projectSkillsDescription" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} style={{top: projectHoverLocation, opacity: projectHoverOpacity}} />
                 
                 </div>
