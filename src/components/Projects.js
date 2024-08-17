@@ -96,7 +96,7 @@ export function Projects () {
             <div id="activeProjectDetails" style={{backgroundImage:`url(${projectsList[activeProject].image})`}}> 
                 <h3 style={{position:"relative", top:"1rem", display:  showClickMe ? "inline" : "none"}}>Click me for details</h3>
                 {activeProject > 0 ?
-                <div id="projectDisplay" onMouseEnter={activeProjectOnEnter} onMouseLeave={activeProjectOnLeave}>
+                <div id="projectDisplay" onMouseDown={activeProjectOnEnter} onMouseEnter={activeProjectOnEnter} onMouseLeave={activeProjectOnLeave}>
                     <div id="projectTitle" style={{bottom: projectHoverLocation, opacity: projectHoverOpacity}}>
                         <h2>{projectsList[activeProject].name}</h2>
                         <p>{projectsList[activeProject].shortDescription}</p>    

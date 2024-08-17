@@ -38,7 +38,7 @@ export function Footer () {
 
     return (
         <footer>
-                
+            <h3 id="contactMe">Contact me:</h3>
             <div className="contact" id="email" onClick={copyEmail} onMouseEnter={()=>{setEmailColour("var(--bright-colour")}} onMouseLeave={()=>{setEmailColour("white")}}>
                 <MdEmail className="contactIcon" style={{color:emailColour}}/>
                 <p className="contactLink" style={{color:emailColour}}>jonporter89@gmail.com</p>

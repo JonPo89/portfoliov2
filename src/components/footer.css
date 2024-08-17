@@ -20,6 +20,11 @@ footer p{
     cursor: pointer;
 }
 
+#contactMe {
+    color: white;
+    display: none;
+}
+
 .contactIcon {
     color: white;
     height: 2rem;
@@ -34,6 +39,9 @@ footer p{
 @media only screen and (max-width: 700px) {
     .contactLink{
         display: none;
+    }
+    #contactMe {
+        display: block;
     }
 
 }

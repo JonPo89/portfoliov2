@@ -7,6 +7,11 @@ import jsonIcon from '../images/skillIcons/jsonIcon.png';
 import apiIcon from '../images/skillIcons/apiIcon.svg';
 import githubIcon from '../images/skillIcons/githubIcon.png';
 import designIcon from '../images/skillIcons/designIcon.svg';
+import problemSolveIcon from '../images/skillIcons/problemSolvingIcon.svg';
+import UXDesignIcon from '../images/skillIcons/UXdesignIcon.svg';
+import cloudflareIcon from '../images/skillIcons/cloudflareIcon.png';
+import responsiveIcon from '../images/skillIcons/responsiveIcon.svg';
+import netlifyIcon from '../images/skillIcons/netlifyIcon.png';
 
 
 export const skills = {
@@ -42,9 +47,30 @@ export const skills = {
         name: "Github",
         icon: githubIcon
     },
+    netlify: {
+        name: "Netlify",
+        icon: netlifyIcon
+    },
+    cloudflare: {
+        name: "Cloudflare",
+        icon: cloudflareIcon
+    },
     design: {
         name: "Design Background",
         icon: designIcon
+    },
+    UX: {
+        name: "UX Design",
+        icon: UXDesignIcon
+    },
+    responsiveDesign: {
+        name: "Responsive Design",
+        icon: responsiveIcon
+    },
+
+    problemSolve: {
+        name: "Problem Solving",
+        icon: problemSolveIcon
     }
 
 }

@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
@@ -9,6 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}>
+          <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
         </Route>

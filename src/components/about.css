@@ -102,5 +102,13 @@
         width: 30%;
         padding: 0.5rem;
     }
+    
+    #skillsList{
+        white-space: wrap;
+    }
+
+    .skill{
+        margin: 0.5rem;
+    }
 
 }

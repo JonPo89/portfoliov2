@@ -9,7 +9,7 @@ import scoutimg07 from '../images/scoutPhotos/scout07.png';
 export const introHighlights = {
     name: {
         text: "Jon Porter",
-        hoverText: "It's not just a random name all over the website!"
+        hoverText: "It's not just a random name<br/> all over the website!"
     },
     background: {
         text: "3D Design/Product Design Engineering",

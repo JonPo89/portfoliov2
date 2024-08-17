@@ -14,21 +14,54 @@ export function About() {
     const [introHoverMouse, setIntroHoverMouse] = useState("");
     const [randomNo, setRandomNo] = useState(0);
     const [easterEgg, setEasterEgg] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(4);
+    const [skillsList, setSkillsList] = useState([]);
 
     const skillNameRef = useRef(null);
 
     const singleSkillsList = Object.values(skills);
-    const skillsList = [...singleSkillsList, ...singleSkillsList, ...singleSkillsList];
+    //const skillsList = [...singleSkillsList, ...singleSkillsList, ...singleSkillsList];
+    
+    //Update windowWidth
+    useEffect(() => {
+        const updateWidth = () => {
+            const width = window.innerWidth;
+            if (width < 500) {
+                setWindowWidth(2);
+            }else if (width < 750){
+                setWindowWidth(3);
+            } else {
+                setWindowWidth(4);
+            }
+        };
+        
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+
+        return () => window.removeEventListener('resize', updateWidth);
+    },[])
+
+    useEffect(() => {
+        if (windowWidth < 4) {
+            setSkillsList([...singleSkillsList]);
+        } else {
+            setSkillsList([...singleSkillsList, ...singleSkillsList, ...singleSkillsList]);
+        }
+    }, [windowWidth])
 
     //scroll Skills
     useEffect(() => {
+        if (windowWidth > 3) {
         const interval = setInterval(() => {
             if (!pauseScroll) {
                 setSkillsScrollPosition(prevPosition => prevPosition - 0.1);
             }
         }, 50);
         return () => clearInterval(interval);
-    }, [pauseScroll]);
+        } else {
+            setSkillsScrollPosition(0);
+        }
+    }, [pauseScroll, windowWidth]);
 
     //reset Skills Position
     useEffect(() => {
@@ -101,10 +134,9 @@ export function About() {
                         <p
                             id="introTextFollowMouse"
                             style={{ left: `${mousePosition.x + 7}px`, top: `${mousePosition.y - 40}px` }}
-                        >
-                            {introHighlights[introHoverMouse]?.hoverText}
-                        </p>
-                    )
+                            dangerouslySetInnerHTML={{ __html: introHighlights[introHoverMouse]?.hoverText }}
+                        />
+                        )
                 ) : null}
 
                 <p id="intro">Hey!

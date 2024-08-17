@@ -10,7 +10,6 @@
   --bright-colour: rgb(83, 196, 196);
   --light-colour: rgb(197, 221, 221);
   --dark-colour: rgb(0,30,32);
-  --font-colour: 'pink';
 }
 
 ::-webkit-scrollbar {
@@ -45,7 +44,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .box {

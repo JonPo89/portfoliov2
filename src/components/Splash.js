@@ -50,7 +50,7 @@ export function Splash (props) {
 
     //Click event, depending on if touch screen or not
     function onClick () {
-        if (isTouchScreen) {
+        if (!splashFolioTerSwap) {
             setSplashFolioTerSwap(true);
             setTimeout(() => {
                 splashHeadingClick();
@@ -61,12 +61,12 @@ export function Splash (props) {
     }
 
     return (
-        <div className="box" id="splash" style={{
+        <div className="box" id="splash" onClick={onClick} style={{
                 opacity: splashOpacity,
                 display: splashDisplay
         }}>
             <div id="splashHeading" 
-                onClick={onClick}
+
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
                 style={{overflow: splashHeadingAnimate ? 'visible' : 'hidden'}} 
