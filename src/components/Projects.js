@@ -21,12 +21,12 @@ export function Projects () {
     const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     useEffect (() => {
-        if (isTouchScreen && projectHoverOpacity < 1) {
+        if (isTouchScreen && activeProject >0 && projectHoverOpacity < 1) {
             setShowClickMe(true);
         } else {
             setShowClickMe(false);
         }
-    },[isTouchScreen, projectHoverOpacity])
+    },[isTouchScreen, projectHoverOpacity, activeProject])
     
     //Update windowWidth
     useEffect(() => {
@@ -89,7 +89,7 @@ export function Projects () {
 
     return (
         <div className="box" id="projects">
-            <div id="projectsHoverMessage" style={{display: followMouseVisible ? "inline" : "none", left: windowWidth === 2 ? 0 : `${mousePosition.x + 7}px`, top: `${mousePosition.y - 80}px`}}>
+            <div id="projectsHoverMessage" style={{display: followMouseVisible && !isTouchScreen ? "inline" : "none", left: windowWidth === 2 ? 0 : `${mousePosition.x + 7}px`, top: `${mousePosition.y - 80}px`}}>
                 <p dangerouslySetInnerHTML={{ __html: hoverMessage }} />
             </div>
 
@@ -103,7 +103,7 @@ export function Projects () {
                     </div>
                     <div id="projectLinks">
                         <a 
-                            href={projectsList[activeProject].websiteLink}
+                            href={projectHoverOpacity > 0 ? projectsList[activeProject].websiteLink : null}
                             target="_blank" 
                             rel="noreferrer"
                             className="projectLink"  
@@ -112,16 +112,13 @@ export function Projects () {
                             style={{right: projectHoverLocation, opacity: projectHoverOpacity, transition: `all ${projectHoverTransitionTime}s ease-in-out}`}}>
                                 View Website
                         </a>
-                        <a href={projectsList[activeProject].gitHubLink}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
+                        <a href={projectHoverOpacity >0 ?projectsList[activeProject].gitHubLink : null}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
                     </div>
                     <p id="projectSkillsDescription" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} style={{top: projectHoverLocation, opacity: projectHoverOpacity}} />
                 
                 </div>
                 : null
                 }
-
-                
-                
             </div>
             
             <div className="projectList">

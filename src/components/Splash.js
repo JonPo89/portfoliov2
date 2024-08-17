@@ -83,7 +83,7 @@ export function Splash (props) {
                             transition: "all 0.5s",
                         }}>
                         <h1 style={{
-                            color: "white",
+                            color: "#ffffff00",
                             }}>er</h1>
                         <h1 style={{
 
