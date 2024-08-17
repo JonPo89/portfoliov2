@@ -47,7 +47,7 @@ export function About() {
         } else {
             setSkillsList([...singleSkillsList, ...singleSkillsList, ...singleSkillsList]);
         }
-    }, [windowWidth])
+    }, [windowWidth, singleSkillsList])
 
     //scroll Skills
     useEffect(() => {
