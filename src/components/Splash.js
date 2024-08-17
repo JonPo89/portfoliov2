@@ -7,9 +7,6 @@ export function Splash (props) {
     const { splashHeadingAlternate, splashHeadingAnimate, splashDisplay, splashOpacity, splashHeadingClick, descriptionOpacity, splashFolioTerSwap, setSplashFolioTerSwap} = props;
     const [ headingHeight, setHeadingHeight ] = useState("3rem");
 
-    //Check if device is touch screen
-    const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
     //Change the Er / Folio switch to suit font changes
     useEffect(() => {
         const updateWidth = () => {
