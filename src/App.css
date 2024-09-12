@@ -10,6 +10,7 @@
   --bright-colour: rgb(83, 196, 196);
   --light-colour: rgb(197, 221, 221);
   --dark-colour: rgb(0,30,32);
+  --inverse-colour: rgb(33, 169, 128);
 }
 
 ::-webkit-scrollbar {

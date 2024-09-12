@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { Footer } from './Footer';
 import { Splash } from './Splash';
 import { fontList } from '../features/fontList';
+import resume from '../images/JonPorterResume.pdf';
 import useAnimatedLetters from '../features/animateLetters';
 import './header.css';
 
@@ -86,18 +87,24 @@ export function Header () {
                 <div className="heading">
                     <h1 
                         id="name" 
-                        onClick={headingClick}
+                        
+                        onClick={onClickToggleHome}
+                        onMouseEnter={headingClick}
                         style={{webkitTextStrokeColor:headingColour ? `hsl(${headingColour}, 100%, 50%)`:'white', fontFamily:`${headingFont}, sans-serif`}}>
                             {headerNameAnimate()}
                     </h1>
                     <h2 id="title">Front End Developer</h2>
                 </div>
                 <div id="nav">
-                    <NavLink to="about" className='inactiveNavLink' onClick={onClickToggleHome}>
-                        Splash Page
-                    </NavLink>
                     <NavLink to="about" className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >About</NavLink>
                     <NavLink to="projects" className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >Projects</NavLink>
+                    <a  
+                        href={resume}
+                        target="_blank"
+                        rel="noreferrer"  
+                        className='inactiveNavLink' >Resume
+                    </a>
+
                 </div>
             </header>
             <Outlet />
