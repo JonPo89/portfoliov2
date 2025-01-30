@@ -1,76 +1,118 @@
-import htmlIcon from '../images/skillIcons/htmlIcon.png';
-import cssIcon from '../images/skillIcons/cssIcon.png';
-import javascriptIcon from '../images/skillIcons/javascriptIcon.png';
-import reactIcon from '../images/skillIcons/reactIcon.png';
-import reduxIcon from '../images/skillIcons/reduxIcon.png';
-import jsonIcon from '../images/skillIcons/jsonIcon.png';
-import apiIcon from '../images/skillIcons/apiIcon.svg';
-import githubIcon from '../images/skillIcons/githubIcon.png';
-import designIcon from '../images/skillIcons/designIcon.svg';
-import problemSolveIcon from '../images/skillIcons/problemSolvingIcon.svg';
-import UXDesignIcon from '../images/skillIcons/UXdesignIcon.svg';
-import cloudflareIcon from '../images/skillIcons/cloudflareIcon.png';
-import responsiveIcon from '../images/skillIcons/responsiveIcon.svg';
-import netlifyIcon from '../images/skillIcons/netlifyIcon.png';
 
-
-export const skills = {
+const frontEndSkills = {
     html: {
         name: "HTML",
-        icon: htmlIcon
+        fileName: 'html'
     },
     css: {
         name: "CSS",
-        icon: cssIcon
+        fileName: 'css',
     },
     javascript: {
         name: "JavaScript",
-        icon: javascriptIcon
+        fileName: 'javascript',
     },
     react: {
         name: "React",
-        icon: reactIcon
+        fileName: 'react',
     },
     redux: {
         name: "Redux",
-        icon: reduxIcon
-    },
-    json: {
-        name: "JSON",
-        icon: jsonIcon
-    },
-    api: {
-        name: "API Integration",
-        icon: apiIcon
-    },
-    github: {
-        name: "Github",
-        icon: githubIcon
-    },
-    netlify: {
-        name: "Netlify",
-        icon: netlifyIcon
-    },
-    cloudflare: {
-        name: "Cloudflare",
-        icon: cloudflareIcon
-    },
-    design: {
-        name: "Design Background",
-        icon: designIcon
-    },
-    UX: {
-        name: "UX Design",
-        icon: UXDesignIcon
+        fileName: 'redux',
     },
     responsiveDesign: {
         name: "Responsive Design",
-        icon: responsiveIcon
+        fileName: 'responsive',
+    },
+    UX: {
+        name: "UX Design",
+        fileName: 'uxdesign',
+    },
+    design: {
+        name: "Design Background",
+        fileName: 'design',
     },
 
-    problemSolve: {
-        name: "Problem Solving",
-        icon: problemSolveIcon
-    }
-
 }
+
+const backEndSkills = {
+    nodejs: {
+        name: "Node.js",
+        fileName: "nodejs"
+    },
+    express: {
+        name: "Express.js",
+        fileName: 'express',
+    },
+    RESTful: {
+        name: "RESTful API",
+        fileName: 'restful',
+    },
+    PostgreSQL: {
+        name: "PostgreSQL",
+        fileName: 'postgresql',
+    },
+    SQL: {
+        name: "SQL",
+        fileName:'sql',
+    },
+    dataStructures: {
+        name: "Data Structures",
+        fileName: 'dataStructures',
+    },
+    webSecurity: {
+        name: "Web Security",
+        fileName: 'webSecurity',
+    }
+}
+
+const devOps = {
+    github : {
+        name: "Git & Version Control",
+        fileName: 'github',
+    },
+    netlify: {
+        name: "Netlify",
+        fileName: 'netlify',
+    },
+    cloudflare: {
+        name: "Cloudflare",
+        fileName: 'cloudflare',
+    },
+    render: {
+        name: "Render",
+        fileName:'render',
+    }
+}
+
+const api = {
+    api: {
+        name: "API Design & Integration",
+        fileName: 'api',
+    },
+    json: {
+        name: "JSON",
+        fileName: 'json',
+    },
+    authentication: {
+        name: "Authentication (OAuth, JWT)",
+        fileName: 'authentication',
+    }
+}
+
+const testing = {
+    jest: {
+        name: "Jest",
+        fileName: 'jest',
+    },
+    mocha: {
+        name: "Mocha",
+        fileName:'mocha',
+    },
+    postman: {
+        name: "Postman",
+        fileName: 'postman',
+    }
+}
+
+export const skills = [frontEndSkills, backEndSkills, devOps, api, testing];

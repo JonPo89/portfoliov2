@@ -1,8 +1,8 @@
 header {
     width: 100%;
     display: inline-flex;
-    padding: 2rem 3rem .5rem 3rem;
-    align-items: end;
+    padding: 1rem 3rem;
+    align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
 }

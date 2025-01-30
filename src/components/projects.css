@@ -1,7 +1,11 @@
 #projects{
     display: inline-flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
+}
+
+#projects h2{
+    color: white;
 }
 
 #touchScreenHover{
@@ -13,49 +17,21 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     z-index: 2;
     text-align: center;
     display: inline;
     align-items: center;
-    justify-content: center;
-}
-
-#activeProjectDetails:hover::before{
-    content: "";
-    position: absolute;
-    background-color: #000000aa;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    border-radius: 10px;
-}
-
-#projectDisplay {
-    height: 100%;
-    width: 100%;
-    padding: 1rem 0;
+    justify-content: start;
+    overflow: auto;
+    padding: 1rem;
     box-sizing: border-box;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-top-right-radius: 20px;
-    transition: opacity 0.2s;
-    position: relative;
-    z-index: 3;
 }
 
-#projectTitle {
-    margin-bottom: 1rem;
-    position: relative;
+#activeProjectDetails p {
     text-align: center;
-    text-shadow: 2px 2px black;
     transition: all 0.2s;
+    position:relative;
+    color: white;
 }
 
 #projectLinks {
@@ -63,7 +39,7 @@
 }
 
 .projectLink {
-    margin: 0 1rem;
+    margin: 2rem 1rem;
     background-color: var(--primary-colour);
     padding: 1rem;
     border-radius: 5px;
@@ -79,12 +55,19 @@
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
 }
 
-#projectSkillsDescription {
-    text-align: center;
-    margin-top: 1rem;
-    text-shadow: 2px 2px black;
-    transition: all 0.2s;
-    position:relative;
+#computerPhoneImage{
+    max-width: 80%;
+    margin: 3rem 0;
+}
+
+#computerImage{
+    display: none;
+    margin: 3rem 0;
+}
+
+#phoneImage{
+    display: none;
+    margin-bottom: 3rem;
 }
 
 .projectList { 
@@ -92,63 +75,47 @@
     flex-direction: column;
     justify-content: start;
     height: 100%;
-    width: 30vw;
+    background-color: rgba(0, 0, 0, 0.2);
     align-items: center;
     padding: 1rem 2rem;
     box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .projectSelection {
-    width: 250px;
+    width: 150px;
     height: 100px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    justify-content: start;
     margin-top: 1rem;
     border-radius: 5px;
-    background-color: #ffffff04;
+    background-color: var(--primary-colour);
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 
 .projectSelection:hover {
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
-    background-color: #ffffff10;
+    background-color: rgb(6, 83, 83);
     transition: all 0.5s;
 }
 
 .projectLogo {
     max-height: 60px;
     max-width: 8rem;
-    background-position:center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    object-fit: contain;
+    object-position: center;
     position: relative;
     transition: all 0.2s;
 }
 
-#projectTitle {
-    color: white;
-    font-family: "Lilita One", sans-serif;
-}
-
-#projectDescription {
-    color: white;
-}
-
-#projectPhoneImage {
-    width: 20%;
-    height: 80%;
-    background-position:center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    right: 5%;
-}
-
 .projectArrow {
     color: white;
-    margin-left: 1rem;
+    margin-right: 1rem;
     height: 3rem;
     width: 3rem;
     transition: all 0.2s ease-in-out;
@@ -168,32 +135,42 @@
 
 @media only screen and (max-width: 850px) {
     #projects{
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: start;
         justify-content: start;
     }
 
-    .projectSelection{
-        margin: 0 0.5rem;
-        height: 80px;
-    }
-
     .projectList{
         flex-direction: row;
-        display: inline-flex;
+        justify-content: space-around;
+        padding: 0.5rem 0;
         width: 100%;
         height: 8rem;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
     #projectListHeading{
         display: none;
     }
 
+    .projectSelection{
+        margin: 0 1px;
+        height: 80px;
+    }
+
+    .projectArrow {
+        transform: rotate(90deg);
+    }
+
+    #computerPhoneImage{
+        max-width: 90%;
+    }
+
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
     .projectList {
-        padding: 0 0.5rem;
         justify-content: space-between;
     }
     
@@ -202,14 +179,15 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        max-width: 19%;
     }
-
-    .projectSelection:hover {
-        width: 100%;
-    }
-
+    
     .projectArrow{
         display: none;
+    }
+
+    #computerPhoneImage{
+        max-width: 100%;
     }
 
 }
@@ -222,10 +200,25 @@
     #projectLinks {
         flex-direction: column;
         justify-content: center;
+        margin: 1rem 0;
     }
 
     .projectLink {
-        margin-top: 1rem;
+        margin: .5rem;
         text-align: center;
+    }
+
+    #computerPhoneImage{
+        display: none;
+    }
+
+    #computerImage{
+        display:inline;
+        width: 100%;
+    }
+
+    #phoneImage{
+        display: inline;
+        width: 80%;
     }
 }

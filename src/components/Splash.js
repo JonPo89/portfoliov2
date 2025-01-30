@@ -92,7 +92,7 @@ export function Splash (props) {
 
             </div>
             <h2 id="splashIntro" style={{opacity:descriptionOpacity}}>
-                Front End Web-Developer
+                Full Stack Engineer
             </h2>
         </div>
     )

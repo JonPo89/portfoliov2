@@ -1,0 +1,26 @@
+.contactIcon{
+    color: white;
+}
+
+.contactIcon:hover{
+    color:var(--bright-colour);
+}
+
+#contactBox{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact{
+    margin-top: 1rem;
+    
+}
+
+#contactMethods{
+    display: inline-flex;
+    margin: 1rem 0;
+
+}

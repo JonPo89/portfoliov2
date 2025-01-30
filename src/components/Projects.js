@@ -1,13 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {projectsList} from '../features/projectsList';
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { bounce } from '../features/bounce';
 import './projects.css';
 
 export function Projects () {
-    const [ projectHoverLocation, setProjectHoverLocation ] = useState(20);
-    const [ projectHoverOpacity, setProjectHoverOpacity ] = useState(0);
-    const [ projectHoverTransitionTime, setProjectHoverTransitionTime ] = useState(0.2);
     const [activeProject, setActiveProject] = useState(0);    
     const [projectBouncePosition, setProjectBouncePosition] = useState(1);
     const [projectTransitionDuration, setProjectTransitionDuration] = useState(0.3);
@@ -15,18 +12,10 @@ export function Projects () {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [ followMouseVisible, setFollowMouseVisible] = useState(false);
     const [ windowWidth, setWindowWidth ] = useState(0);
-    const [ showClickMe, setShowClickMe] = useState(false);
 
     //Check if device is touch screen
     const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    useEffect (() => {
-        if (isTouchScreen && activeProject >0 && projectHoverOpacity < 1) {
-            setShowClickMe(true);
-        } else {
-            setShowClickMe(false);
-        }
-    },[isTouchScreen, projectHoverOpacity, activeProject])
     
     //Update windowWidth
     useEffect(() => {
@@ -71,20 +60,8 @@ export function Projects () {
     
     //Make logo bounce
     function mouseEnterSkill (project) {
-        setActiveProject(project.index);
+        setActiveProject(project);
         bounce(setProjectBouncePosition, projectTransitionDuration, setProjectTransitionDuration);
-    }
-
-    //Show details when hovering over project
-    function activeProjectOnEnter () {
-        bounce(setProjectHoverLocation, projectHoverTransitionTime, setProjectHoverTransitionTime);
-        setProjectHoverOpacity(1);
-    }
-
-    //Hide details when no longer hovering project
-    function activeProjectOnLeave () {
-        setProjectHoverLocation(20);
-        setProjectHoverOpacity(0);
     }
 
     return (
@@ -93,36 +70,54 @@ export function Projects () {
                 <p dangerouslySetInnerHTML={{ __html: hoverMessage }} />
             </div>
 
-            <div id="activeProjectDetails" style={{backgroundImage:`url(${projectsList[activeProject].image})`}}> 
-                <h3 style={{position:"relative", top:"1rem", display:  showClickMe ? "inline" : "none"}}>Click me for details</h3>
+            <div id="activeProjectDetails"> 
                 {activeProject > 0 ?
-                <div id="projectDisplay" onMouseDown={activeProjectOnEnter} onMouseEnter={activeProjectOnEnter} onMouseLeave={activeProjectOnLeave}>
-                    <div id="projectTitle" style={{bottom: projectHoverLocation, opacity: projectHoverOpacity}}>
+                <>
+                    <div id="projectTitle">
                         <h2>{projectsList[activeProject].name}</h2>
                         <p>{projectsList[activeProject].shortDescription}</p>    
                     </div>
                     <div id="projectLinks">
-                        {projectHoverOpacity > 0 ? 
-                        <><a 
+                        <a 
                             href={projectsList[activeProject].websiteLink}
                             target="_blank" 
                             rel="noreferrer"
                             className="projectLink"  
                             onMouseEnter={ () => setHoverMessage(projectsList[activeProject].warning) }
                             onMouseLeave={ () => setHoverMessage("")}
-                            style={{right: projectHoverLocation, opacity: projectHoverOpacity, transition: `all ${projectHoverTransitionTime}s ease-in-out}`}}>
+                            >
                                 View Website
                         </a>
                         
-                        <a href={projectsList[activeProject]}  className="projectLink" target="_blank" rel="noreferrer" style={{left: projectHoverLocation, opacity: projectHoverOpacity}}>View on Github</a>
-                        </>
-                        : null
-                    }
-                        </div>
-                    <p id="projectSkillsDescription" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} style={{top: projectHoverLocation, opacity: projectHoverOpacity}} />
+                        <a 
+                            href={projectsList[activeProject]}  
+                            className="projectLink" 
+                            target="_blank" 
+                            rel="noreferrer"     
+                        >
+                            View on Github
+                        </a>
+                    </div>
+                    <p 
+                        id="projectDescription" 
+                        dangerouslySetInnerHTML={{ __html: projectsList[activeProject].description }} 
+                    />
+                    
+                    <img id="computerPhoneImage" src={`/images/projects/${projectsList[activeProject].imageLink}Image.png`} alt={`${projectsList[activeProject].name} computer and phone preview`}/>
+                    <img id="computerImage" alt={`${projectsList[activeProject].name} computer preview`} src={`/images/projects/${projectsList[activeProject].imageLink}Computer.png`}/>
+                    <img id="phoneImage" alt={`${projectsList[activeProject].name} phone preview`} src={`/images/projects/${projectsList[activeProject].imageLink}Phone.png`}/>
+                   
+                    <p 
+                        id="projectSkillsDescription" 
+                        dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} 
+                    />
                 
+                </>
+                : 
+                <div id="projectTitle">
+                    <h2>{projectsList[activeProject].name}</h2>
+                    <p>{projectsList[activeProject].shortDescription}</p>    
                 </div>
-                : null
                 }
             </div>
             
@@ -132,11 +127,23 @@ export function Projects () {
                     index > 0 ?
                     <div 
                         key={index} 
-                        onMouseEnter={() => mouseEnterSkill(project)} 
-                        style={{backgroundColor: activeProject === index ? "#ffffff10" : ""}}
+                        onMouseEnter={() => mouseEnterSkill(index)} 
+                        style={{backgroundColor: activeProject === index ? "#ffffff20" : ""}}
                         className="projectSelection">
-                        <img className="projectLogo" src={project.logo} alt={`${project.name} logo`} style={{left:activeProject === index ? projectBouncePosition : windowWidth > 3 ? "2rem" : 0, transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
-                        <FaArrowRight className="projectArrow" style={{opacity: activeProject === index ? 1 : 0, right:activeProject === index ? projectBouncePosition : "2rem", transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
+                            <FaArrowLeft 
+                                className="projectArrow" 
+                                style={{opacity: activeProject === index ? 1 : 0, 
+                                    left:activeProject === index ? projectBouncePosition : "2rem", 
+                                    transition: `all ${projectTransitionDuration}s ease-in-out`}}
+                            />
+                            <img className="projectLogo" 
+                                src={`/images/projects/${projectsList[index].imageLink}Logo.png`} 
+                                alt={`${project.name} logo`} 
+                                style={{
+                                    right:activeProject === index && windowWidth !== 3 ? projectBouncePosition : windowWidth > 3 ? "2rem" : 0, 
+                                    bottom: activeProject === index && windowWidth === 3? projectBouncePosition : "0rem",
+                                    transition: `all ${projectTransitionDuration}s ease-in-out`}}/>
+                        
                     </div> :
                     null
                 ))}

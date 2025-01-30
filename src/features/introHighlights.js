@@ -1,10 +1,3 @@
-import scoutimg01 from '../images/scoutPhotos/scout01.png';
-import scoutimg02 from '../images/scoutPhotos/scout02.png';
-import scoutimg03 from '../images/scoutPhotos/scout03.png';
-import scoutimg04 from '../images/scoutPhotos/scout04.png';
-import scoutimg05 from '../images/scoutPhotos/scout05.png';
-import scoutimg06 from '../images/scoutPhotos/scout06.png';
-import scoutimg07 from '../images/scoutPhotos/scout07.png';
 
 export const introHighlights = {
     name: {
@@ -49,6 +42,6 @@ export const introHighlights = {
     },
     scout: {
         text: "cuddle my cat, Scout",
-        hoverImage: [scoutimg01, scoutimg02, scoutimg03, scoutimg04, scoutimg05, scoutimg06, scoutimg07]
+        noImages: 7
     }
 }

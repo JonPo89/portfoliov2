@@ -26,22 +26,9 @@
     text-align: center;
 }
 
-#techSkills h2{
-    margin-bottom: 0.5rem;
-}
-
-.skill {
-    height: 4rem;
-    width: 4rem;
-    object-fit: contain;
-    background-color: #ffffff20;
-    padding: 1rem;
-    border-radius: 50%;
-    overflow:visible;
-    margin: 0 1.5rem;
-    position: relative;
-    display: inline;
-    transition: all 0.5s;
+#techSkills h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #skillsList {
@@ -49,22 +36,33 @@
     overflow: hidden;
     height: 6rem;
     position: relative;
-    white-space: nowrap;
     display: inline;
 }
 
-#skillsList img {
-    animation: scroll 10s linear infinite;
+.skill {
+    height: 4rem;
+    width: 4rem;
+    display: inline;
+    object-fit: contain;
+    background-color: #ffffff20;
+    padding: 1rem;
+    border-radius: 50%;
+    overflow:visible;
+    margin: 0 1.5rem;
+    position: relative;
+    transition: all 0.5s;
 }
 
-#skillNameFollowMouse {
-    position: absolute;
-    background-color: white;
-    padding: 0.5rem;
-    color: var(--primary-colour);
-    z-index: 2;
-    border-radius: 5px 5px 5px 0;
-    white-space: nowrap;
+.skill:hover{
+    background-color: #ffffff40;
+}
+
+.skillBox {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .introHighlight {

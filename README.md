@@ -14,3 +14,12 @@ Jon Porter
 
 * 1.0
     * First release.
+
+* 2.0
+    * Updated project list
+	* Two new projects
+    * Updated the way projects are displayed, with more information and in depth description
+    * Removed Footer and added Contacts
+    * Lowered image sizes and changed image links
+    * Updated resume and changed to Full Stack Engineer
+    * Updated Skills list
