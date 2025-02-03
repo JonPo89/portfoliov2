@@ -1,6 +1,3 @@
-.contactIcon{
-    color: white;
-}
 
 .contactIcon:hover{
     color:var(--bright-colour);
@@ -12,15 +9,47 @@
     align-items: center;
     text-align: center;
     padding: 1rem;
+    overflow-y: auto;
+}
+#contactMethods{
+    display: inline-flex;
+
 }
 
 .contact{
-    margin-top: 1rem;
+    margin: 1rem 2rem;
     
 }
 
-#contactMethods{
-    display: inline-flex;
-    margin: 1rem 0;
+.contact:hover{
+    cursor: pointer;
+}
 
+.contactIcon {
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    padding: 1rem;
+    background-color: #ffffff20;
+    border-radius: 50%;
+    overflow: visible;
+    transition: color 0.5s;
+}
+
+.contactIcon:hover {
+    background-color: #ffffff40;
+}
+
+.contactLink {
+    transition: color 0.5s;
+}
+
+@media only screen and (max-width: 500px){
+    #contactMethods{
+        flex-direction: column;
+    }
+
+    .contact {
+        margin-top: 2rem;
+    }
 }

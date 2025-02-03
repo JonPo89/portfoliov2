@@ -55,6 +55,14 @@
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
 }
 
+.projectWarning {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--bright-colour);
+}
+
 #computerPhoneImage{
     max-width: 80%;
     margin: 3rem 0;

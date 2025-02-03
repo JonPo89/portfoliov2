@@ -38,9 +38,7 @@ export function Contact (){
 
     return (
         <div id="contactBox" className="box" >
-            <h3 id="contactMe">Contact Me</h3>
-            <br/>
-            <p>Send me a lil message or just check me out</p>
+            <h2 id="contactMe">Contact Me</h2>
             <div id="contactMethods">
                 <a href="https://github.com/JonPo89" target="_blank" rel="noreferrer"> 
                     <div className="contact" id="github" onMouseEnter={()=>{setGithubColour("var(--bright-colour")}} onMouseLeave={()=>{setGithubColour("white")}}>

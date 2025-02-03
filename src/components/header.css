@@ -10,7 +10,7 @@ header {
 #nav {
     display: inline-flex;
     justify-content: space-between;
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 .inactiveNavLink {
@@ -20,7 +20,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 .inactiveNavLink:hover {
@@ -38,7 +38,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
     text-decoration: underline;
 }
 
@@ -85,15 +85,15 @@ header {
 
     #nav {
         width: 100%;
-        padding-left: 0;
+        margin-left: 0;
     }
 
     .inactiveNavLink {
-        padding-left: 0;
+        margin-left: 0;
     }
 
     .activeNavLink {
-        padding-left: 0;
+        margin-left: 0;
     }
 
     #title {

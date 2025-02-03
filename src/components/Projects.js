@@ -5,7 +5,7 @@ import { bounce } from '../features/bounce';
 import './projects.css';
 
 export function Projects () {
-    const [activeProject, setActiveProject] = useState(0);    
+    const [activeProject, setActiveProject] = useState(1);    
     const [projectBouncePosition, setProjectBouncePosition] = useState(1);
     const [projectTransitionDuration, setProjectTransitionDuration] = useState(0.3);
     const [ hoverMessage, setHoverMessage ] = useState("");
@@ -98,6 +98,11 @@ export function Projects () {
                             View on Github
                         </a>
                     </div>
+                    {isTouchScreen && projectsList[activeProject].warning? 
+                    <p className="projectWarning" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].warning}} />
+                        :
+                    null
+                    }
                     <p 
                         id="projectDescription" 
                         dangerouslySetInnerHTML={{ __html: projectsList[activeProject].description }} 
