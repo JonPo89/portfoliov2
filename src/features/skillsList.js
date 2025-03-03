@@ -12,6 +12,10 @@ const frontEndSkills = {
         name: "JavaScript",
         fileName: 'javascript',
     },
+    typescript: {
+        name: "TypeScript",
+        fileName: 'typescript',
+    },
     react: {
         name: "React",
         fileName: 'react',
@@ -32,6 +36,18 @@ const frontEndSkills = {
         name: "Design Background",
         fileName: 'design',
     },
+    next: {
+        name: 'Next.js',
+        fileName: 'next',
+    },
+    bootleg: {
+        name: 'Bootstrap',
+        fileName: 'bootstrap'
+    },
+    tailwind: {
+        name: 'Tailwind',
+        fileName: 'tailwind'
+    }
 
 }
 
@@ -115,4 +131,19 @@ const testing = {
     }
 }
 
-export const skills = [frontEndSkills, backEndSkills, devOps, api, testing];
+const languages = {
+    python: {
+        name: "Python (Basic)",
+        fileName: 'python',
+    },
+    ruby: {
+        name: "Ruby (Basic)",
+        fileName: 'ruby',
+    },
+    csharp: {
+        name: 'C# (Basic)',
+        fileName: 'csharp',
+    }
+}
+
+export const skills = [frontEndSkills, backEndSkills, devOps, api, testing, languages];

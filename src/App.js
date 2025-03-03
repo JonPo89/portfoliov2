@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Splash } from './components/Splash'
 import { About } from './components/About';
+import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import useAnimatedLetters from './features/animateLetters';
 import { fontList } from './features/fontList';
@@ -106,6 +107,7 @@ function App() {
             <Route path="/" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Skills />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,69 +1,53 @@
 #about {
     overflow-y: auto;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 #introBox {
-    display: inline-flex;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 1rem;
+
 }
 
 #intro {
     margin: 1rem;
     color: var(--light-colour);
-    width: 80%;
+    max-width: 80%;
+    flex-shrink: 1;
 }
 
-#mePortrait {
-    width: 20%;
-    object-fit:contain;
-    margin:1rem;
-}
-
-#techSkills {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-#techSkills h3{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-}
-
-#skillsList {
-    width: 100%;
+#portraitBox{
+    display: block;
+    background-size: cover;
+    margin: 0.5rem;
     overflow: hidden;
-    height: 6rem;
-    position: relative;
-    display: inline;
+    background-color: #00000020;
+    border-radius: 50%;
+    flex: 0 0 360px;
 }
 
-.skill {
-    height: 4rem;
-    width: 4rem;
-    display: inline;
-    object-fit: contain;
-    background-color: #ffffff20;
-    padding: 1rem;
-    border-radius: 50%;
-    overflow:visible;
-    margin: 0.5rem 1.5rem;
+.mePortrait{
+    width: 360px;
+    height: 360px;
     position: relative;
     transition: all 0.5s;
 }
 
-.skill:hover{
-    background-color: #ffffff40;
-}
-
-.skillBox {
+#hair {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.5rem;
+}
+
+#facialHair {
+    display: inline-flex;
+}
+
+#eyesEars {
+    top: -730px;
 }
 
 .introHighlight {
@@ -101,17 +85,21 @@
         align-items: center;
     }
 
-    #mePortrait{
-        width: 30%;
-        margin: 0.5rem;
-    }
-    
-    #skillsList{
-        white-space: wrap;
+}
+
+@media only screen and (max-width: 450px) {
+    .mePortrait {
+        width: 200px;
+        height: 200px;
+        
     }
 
-    .skill{
-        margin: 0.5rem;
+    #portraitBox{
+        height: 200px;
+        flex: 0 0 200px;
     }
 
+    #eyesEars {
+        top: -410px;
+    }
 }
