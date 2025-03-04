@@ -21,7 +21,7 @@ export function About() {
         } else {
             setSmallWindow('large');
         }
-    }, [window.innerWidth])
+    }, [])
 
     const hairLocation = {
         hair: {small: ['-205px', '-405px'],
@@ -65,7 +65,7 @@ export function About() {
         },3000)
         
         return () => clearInterval(interval);
-    }, [hairToggle])
+    }, [hairToggle, easterEgg])
 
 
     //Show picture of Scout

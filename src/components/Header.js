@@ -17,7 +17,7 @@ export function Header (props) {
         } else{
             setLargeScreen(false);
         }
-    },[window.innerWidth])
+    },[])
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
