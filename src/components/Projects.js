@@ -86,7 +86,7 @@ export function Projects () {
                             onMouseEnter={ () => setHoverMessage(projectsList[activeProject].warning) }
                             onMouseLeave={ () => setHoverMessage("")}
                             >
-                                View Website
+                                {windowWidth === 2 ? 'Website' : 'View Website'}
                         </a>
                         
                         <a 
@@ -95,7 +95,7 @@ export function Projects () {
                             target="_blank" 
                             rel="noreferrer"     
                         >
-                            View on Github
+                            {windowWidth === 2 ? 'Github' : 'View on Github'}
                         </a>
                     </div>
                     {isTouchScreen && projectsList[activeProject].warning? 

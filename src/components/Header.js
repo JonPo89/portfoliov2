@@ -10,13 +10,18 @@ export function Header (props) {
     const [largeScreen, setLargeScreen] = useState(true);
 
     useEffect(() => {
-        let w = window.innerWidth;
-        if (w > 950){
-            setLargeScreen(true)
+        const handleResize = () => {
+            const w = window.innerWidth;
+            setLargeScreen(w > 950);
             setMenuOpen(false);
-        } else{
-            setLargeScreen(false);
-        }
+        };
+    
+        handleResize();
+    
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     },[])
 
     const toggleMenu = () => {
@@ -24,7 +29,7 @@ export function Header (props) {
     };
 
     return (
-        <header>
+        <header onMouseLeave={()=>setMenuOpen(false)}>
             <nav className="navbar">
                 <div className="heading navbar-brand">
                     <h1 

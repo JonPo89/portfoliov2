@@ -21,6 +21,26 @@ function App() {
     const [headingFont, setHeadingFont] = useState("Lilita One");
     const [headingAnimate, setHeadingAnimate] = useState(true);
 
+    useEffect(() => {
+        async function loadBT () {
+            try {
+                const response = await fetch('https://breakfasttimeshop.netlify.app/products', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'include',
+                });
+                if (!response.ok) throw new Error('Fetching products failed');
+                const data = await response.json();
+                return data;
+            } catch (err) {
+                console.log('Error loading products list', err);
+            }
+        }
+        loadBT();
+    },[])
+
     //Change heading colour when mouse wheel scrolled
     useEffect(() => {
         const generateRandomColour = () => {
