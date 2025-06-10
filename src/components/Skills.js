@@ -50,9 +50,9 @@ export function Skills () {
                 }
             </div>
             <h2>Technical Skills</h2>
-            <p>As a Full Stack Engineer with a versatile background including Design, UX/UI and Project Management, I have a diverse range of skills, problem solving abilities, and a strong eye for detail.
-                <br/><br/>I'm always looking to learn new things, discovering the latest languages, frameworks and skills, refining my UI/UX skills, and taking courses and classes.
-                <br/><br/>Below is a selection of some of my skills.
+            <p>As a Full Stack Engineer with a versatile background including Design, UX/UI and Project Management, I bring a diverse and unique approach to web development.  
+                <br/><br/>Whether you're building a responsive E-Commerce shop, a dynamic Web App, require SEO optimisation or a fully integrated Backend System, I can help turn your ideas into scalable, user friendly websites.  My skills will ensure every project is not only functional but also intuitive and engaging.
+                <br/><br/>Below is a selection of some of my specific skills:
             </p>
             
             {skills && skills[0] ? 

@@ -95,12 +95,6 @@ function App() {
         }, 1350);
     }
 
-    //Randomly change header font
-    const headingClick = () => {
-        let randomFontNo = Math.floor(Math.random() * fontList.length);
-
-        setHeadingFont(fontList[randomFontNo]);
-    }
 
   return (
     <div className="App">
@@ -117,8 +111,7 @@ function App() {
             setSplashFolioTerSwap={setSplashFolioTerSwap}
         />
         <Header 
-          onClickToggleHome= {onClickToggleHome} 
-          headingClick={headingClick} 
+          onClickToggleHome= {onClickToggleHome}
           headingColour={headingColour}
           headingFont={headingFont}
           headerNameAnimate={headerNameAnimate}

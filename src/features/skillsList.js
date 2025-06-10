@@ -8,6 +8,10 @@ const frontEndSkills = {
         name: "CSS",
         fileName: 'css',
     },
+    sass: {
+        name: "SASS",
+        fileName: 'sass',
+    },
     javascript: {
         name: "JavaScript",
         fileName: 'javascript',

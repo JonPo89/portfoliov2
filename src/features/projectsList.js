@@ -7,12 +7,20 @@ export const projectsList = [
     {
         name: "Breakfast Time",
         imageLink: 'breakfastTime',
-        shortDescription: "A Full Stack fake E-Commerce website that sells cards.",
+        shortDescription: "A Full Stack indicative E-Commerce website that sells cards.",
         websiteLink: "https://breakfasttimeshop.netlify.app/",
         gitHubLink: "https://github.com/JonPo89/breakfastTime",
         warning: "",
-        description: "This app illustrates my skills in full-stack web development, including Front-End, Back-End, and database integration.<br/>Users can browse products, create accounts, sign in, place orders, save carts, and view order history. All information is stored securely in a PostgreSQL database, with user passwords hashed for security. <br/>Due to the backend being hosted on a free site, it may be asleep, and the website might need to be refreshed a few times to wake it up.",
-        skillsDescription: "This app creates a Front-End with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End, incorporating <strong>React</strong> and <strong>Redux</strong> for added functionality.<br/> The Back-End is created using <strong>Javascript</strong>, <strong>Express.js</strong>, to send SQL Queries to a <strong>PostgreSQL</strong> database using <strong>node-Postgres</strong>.<br/>The database is created using <strong>PostgreSQL</strong> and stored on a Neon server."
+        description: "This app illustrates my diverse range of skills as a Full-Stack Developer, showcasing my Front-End, Back-End, Database and Design capabilities.<br/><br/>Though purely indicative, users can browse the fully interactive and responsive app, creating accounts, browsing products, and shopping as you would on E-Commerce websites.<br/><br/> All information is stored securely in a PostgreSQL database, with user passwords hashed for security. <br/><br/>Due to the backend being hosted on a free site, it may be asleep, and the website might need to be refreshed a few times to wake it up.",
+        skillsDescription: "This app creates a Front-End with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End, incorporating <strong>Next.js</strong> and <strong>SCSS</strong> for added functionality.<br/><br/> The Back-End is created using <strong>Javascript</strong>, <strong>Express.js</strong>, to send SQL Queries to a <strong>PostgreSQL</strong> database using <strong>node-Postgres</strong>.<br/><br/>The database is created using <strong>PostgreSQL</strong> and stored on a Neon server."
+    },
+    {
+        name: "Dr Susan Shedda - Colorectal Surgeon",
+        imageLink: 'susanShedda',
+        shortDescription: "A Website for Melbourne Colorectal Surgeon, Dr Susan Shedda",
+        websiteLink: "https://roboticdocs.com/",
+        description: "A client website that was developed on GoDaddy, I was approached to improve their website UI/UX, SEO, and set up their Google Business Account.  <br/><br/>To achieve this I incorporated a stricter visual hierarchy, increased the user experience through more intuitive links, folders and page layouts, used custom code to include multiple hospital locations with more cohesive information, and incorporated various SEO techniques throughout the website, such as alt text, keywords, backlinks and more.",
+        skillsDescription: "This job required use of my <strong>HTML</strong>, <strong>CSS</strong> to understand how the GoDaddy custom sections worked to seamlessly incorporate the maps, as well as my <strong>UX/UI</strong>, and <strong>SEO</strong> skills."
     },
     {
         name: "Wizard Quest",
@@ -21,8 +29,8 @@ export const projectsList = [
         websiteLink: "https://wizardquestjp.netlify.app",
         gitHubLink: "https://github.com/JonPo89/wizardquest",
         warning: "This website uses the Meta AI, llama, <br/>which can be slow, so please be patient",
-        description: "This app illustrates my skills in working with LLMs to create unique and responsive websites to suit user requirements.<br/>By creating a Worker on Cloudspace, I have connected to Llama 3, Meta’s open-source AI model, directing it on how to respond to users.<br/> Because of limitations in the free version, I have it summarise the story every few responses to not lose the history of the user’s adventure.",
-        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/><strong>React</strong> and the utilisation of <strong>Props</strong> is used to add functionality.<br/> A backend function was created using <strong>Cloudflare Workers</strong> to incorporate <strong>AI</strong> whose <strong>API</strong> is accessed through <strong>JSON</strong>."
+        description: "This app illustrates my skills in working with LLMs to create unique and responsive websites to suit user requirements.<br/><br/>By creating a Worker on Cloudspace, I have connected to Llama 3, Meta’s open-source AI model, directing it on how to respond to users.<br/><br/> Because of limitations in the free version, I have it summarise the story every few responses to not lose the history of the user’s adventure.",
+        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/><br/><strong>React</strong> and the utilisation of <strong>Props</strong> is used to add functionality.<br/><br/> A backend function was created using <strong>Cloudflare Workers</strong> to incorporate <strong>AI</strong> whose <strong>API</strong> is accessed through <strong>JSON</strong>."
     },
     {
         name: "rdt.",
@@ -31,8 +39,8 @@ export const projectsList = [
         websiteLink: "https://rdtmin.netlify.app",
         gitHubLink: "https://github.com/JonPo89/rdt/tree/main/rdt",
         warning: "",
-        description: "This app illustrates my skills working with Redux and external APIs.<br/> Through these APIs, users can explore a stripped back reddit with rdt. They can browse popular through the most popular posts on the most popular subreddits, without the clutter and interference of excessive features.",
-        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/><strong>React</strong> and <strong>Redux</strong> are used to add functionality.<br/> <strong>JSON</strong> is then used to access the Reddit <strong>API</strong>, allowing the user to access Subreddits, Posts and Comments."
+        description: "This app illustrates my skills working with Redux and external APIs.<br/><br/> Through these APIs, users can explore a stripped back reddit with rdt. They can browse popular through the most popular posts on the most popular subreddits, without the clutter and interference of excessive features.",
+        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/><br/><strong>React</strong> and <strong>Redux</strong> are used to add functionality.<br/><br/> <strong>JSON</strong> is then used to access the Reddit <strong>API</strong>, allowing the user to access Subreddits, Posts and Comments."
     },
     {
         name: "Bill Ding's Building Co.",
@@ -41,7 +49,7 @@ export const projectsList = [
         websiteLink: "https://billdings.netlify.app",
         gitHubLink: "https://github.com/JonPo89/Bill-Dings",
         warning: "",
-        description: "This website illustrates my skills in using Bootstrap to create static webpages.<br/> Bill Ding's Building Co. website features a responsive design, adheres to standard accessibility practices, and employs proper semantic structure.",
+        description: "This website illustrates my skills in using Bootstrap to create static webpages.<br/><br/> Bill Ding's Building Co. website features a responsive design, adheres to standard accessibility practices, and employs proper semantic structure.",
         skillsDescription: "<br/><br/>This is a basic website created using only <strong>HTML</strong>, <strong>CSS</strong>, and the <strong>Bootstrap</strong> Framework."
     },
     {
@@ -51,7 +59,7 @@ export const projectsList = [
         websiteLink: "https://classclicker.netlify.app/",
         gitHubLink: "https://github.com/JonPo89/classClicker",
         warning: "",
-        description: "This app illustrates my skills in JavaScript, particularly in the creation of custom classes.<br/>The clicker game is a web app that allows users to “click”, earning them currency that they can use to purchase and upgrade ‘Producers’ (which automatically generate currency) and upgrade the value of the “clicks”.<br/>By creating a custom 'Producer' class, the costs, production values, and colours are automatically calculated, meaning there is no limit to how many ‘Producers’ can be created.",
-        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/>Incorporating <strong>Custom Classes</strong> to create an essentially never ending clicker game."
+        description: "This app illustrates my skills in JavaScript, particularly in the creation of custom classes.<br/><br/>The clicker game is a web app that allows users to “click”, earning them currency that they can use to purchase and upgrade ‘Producers’ (which automatically generate currency) and upgrade the value of the “clicks”.<br/><br/>By creating a custom 'Producer' class, the costs, production values, and colours are automatically calculated, meaning there is no limit to how many ‘Producers’ can be created.",
+        skillsDescription: "This app uses <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Javascript</strong> for the Front-End.  <br/><br/>Incorporating <strong>Custom Classes</strong> to create an essentially never ending clicker game."
     }
 ]

@@ -50,7 +50,6 @@ header {
     line-height: 1;
     margin-bottom: 10px;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ffffff;
     color: #ffffff00;
 }
 
@@ -171,6 +170,11 @@ header {
         display: block;
     }
 
+    #name{
+        -webkit-text-stroke-color: green;
+
+    }
+
     #title{
         display: none;
     }
@@ -203,6 +207,7 @@ header {
     header { 
         padding: 1rem;
     }
+
 
     .navbar-collapse{
         left: -1rem;

@@ -17,6 +17,7 @@ ul {
 
 #skills p{
     width: 90%;
+    max-width: 800px;
 }
 
 #skillBubblesBox {
@@ -64,7 +65,7 @@ ul {
     width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .skillsList {

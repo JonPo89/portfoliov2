@@ -40,7 +40,7 @@
 
 #splashHeading span{
     font-family: "Lilita One", sans-serif;
-    color: #ffffff00;
+    color: #032e2e;
     font-size: 6rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--primary-colour);
@@ -55,7 +55,7 @@
 }
 
 #splashIntro{
-    color: var(--bright-colour);
+    color: #032e2e;
     position: relative;
     text-align: center;
     transition: all 0.2s;

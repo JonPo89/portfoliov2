@@ -70,9 +70,9 @@ export function Projects () {
                 <p dangerouslySetInnerHTML={{ __html: hoverMessage }} />
             </div>
 
-            <div id="activeProjectDetails"> 
+            
                 {activeProject > 0 ?
-                <>
+                <div id="activeProjectDetails"> 
                     <div id="projectTitle">
                         <h2>{projectsList[activeProject].name}</h2>
                         <p>{projectsList[activeProject].shortDescription}</p>    
@@ -88,15 +88,18 @@ export function Projects () {
                             >
                                 {windowWidth === 2 ? 'Website' : 'View Website'}
                         </a>
+                        {projectsList[activeProject].gitHubLink ?
+                            <a 
+                                href={projectsList[activeProject].gitHubLink}  
+                                className="projectLink" 
+                                target="_blank" 
+                                rel="noreferrer"     
+                            >
+                                {windowWidth === 2 ? 'Github' : 'View on Github'}
+                            </a>
+                        :
+                        null}
                         
-                        <a 
-                            href={projectsList[activeProject]}  
-                            className="projectLink" 
-                            target="_blank" 
-                            rel="noreferrer"     
-                        >
-                            {windowWidth === 2 ? 'Github' : 'View on Github'}
-                        </a>
                     </div>
                     {isTouchScreen && projectsList[activeProject].warning? 
                     <p className="projectWarning" dangerouslySetInnerHTML={{ __html: projectsList[activeProject].warning}} />
@@ -117,14 +120,14 @@ export function Projects () {
                         dangerouslySetInnerHTML={{ __html: projectsList[activeProject].skillsDescription }} 
                     />
                 
-                </>
+                </div>
                 : 
                 <div id="projectTitle">
                     <h2>{projectsList[activeProject].name}</h2>
                     <p>{projectsList[activeProject].shortDescription}</p>    
                 </div>
                 }
-            </div>
+            
             
             <div className="projectList">
                 <h2 id="projectListHeading">Projects</h2>

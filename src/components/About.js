@@ -21,7 +21,7 @@ export function About() {
         } else {
             setSmallWindow('large');
         }
-    }, [])
+    }, [window.innerWidth])
 
     const hairLocation = {
         hair: {small: ['-205px', '-405px'],
@@ -100,12 +100,12 @@ export function About() {
                     <br /><br />
                     I’m a <span className="introHighlight" >Full Stack Engineer</span> from <span className="introHighlight" >Melbourne, Australia.</span>
                     <br/><br />
-                    I come from a <span className="introHighlight">3D Design/Product Design Engineering</span> background, working in the industry since 2012, as well as doing a <span className="introHighlight">UX/UI Design</span> Course before discovering the amazing and versatile world of coding. 
-                    I started my coding journey at <span className="introHighlight">Codecademy</span> doing a couple of short courses on <span className="introHighlight">C#</span> and <span className="introHighlight">Python</span>, before deciding to put all my old MySpace (miss you Tom) coding knowledge to use and focusing on <span className="introHighlight">Full Stack Engineering and Web Development.</span>  It's been crazy, and so interesting learning about how web development has evolved to suit our requirements, and I'm so excited to be part of where it goes in the future.
-                    <br /> <br />
-                    I love the problem solving side of coding, how can I make <span className="introHighlight">designs pop more</span>, where can I add <span className="introHighlight">user interaction and feedback</span>, how did a certain website do something, can I add little <span className="introHighlight activeHighlight" onClick={() => setEasterEgg(0)}>easter eggs</span> for people to find? With coding there really is no limit to what you can achieve, it just requires a lot of problem solving, and testing different methods, and I’m always eager to learn and do more.
-                    <br /> <br />
-                    When I’m not coding I like to watch moves, read books, draw, game, hang out with friends, or <span className="introHighlight activeHighlight" onMouseEnter={mouseEnterScout} onMouseLeave={() => setIntroHoverMouse("")}>{introHighlights.scout.text}</span>!
+                    As a <span className="introHighlight"> Full Stack Engineer</span> with a strong and versatile background, including  <span className="introHighlight">design, engineering</span> and  <span className="introHighlight">UX/UI</span>, I bring a unique perspective to Web Development.  With a strong enthusiasm in problem solving, design and a keen eye for detail, I create  <span className="introHighlight">unique, user friendly</span> and  <span className="introHighlight">responsive</span> websites to suit all client needs.
+                    <br/><br/>
+                    Despite already being a confident and capable Developer, I know that there’s always room to grow.  I am constantly looking at areas that I can improve, taking courses, learning new technologies, languages and looking at other websites and studying how they achieved something.  
+                    <br/><br/>
+                    Outside of coding I love drawing, watching movies, design, <span className="introHighlight activeHighlight" onClick={() => setEasterEgg(0)}>silly gags</span>, hanging out with friends, gaming, going to the gym, and will typically be found with my cat, <span className="introHighlight activeHighlight" onMouseEnter={mouseEnterScout} onMouseLeave={() => setIntroHoverMouse("")}>Scout</span>, on my lap.
+
                 </p>
 
                 <div id="portraitBox" className="mePortrait" style={{backgroundImage: easterEgg < 2 ? 'url("/images/about/meEgg.png")' : 'url("/images/about/AFaceTemplate00.png")'}}>
