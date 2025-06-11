@@ -6,7 +6,6 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import useAnimatedLetters from './features/animateLetters';
-import { fontList } from './features/fontList';
 import { Contact } from './components/Contact';
 import './App.css';
 
