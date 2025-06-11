@@ -21,7 +21,7 @@ export function About() {
         } else {
             setSmallWindow('large');
         }
-    }, [window.innerWidth])
+    }, [])
 
     const hairLocation = {
         hair: {small: ['-205px', '-405px'],
